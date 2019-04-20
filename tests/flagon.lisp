@@ -38,4 +38,10 @@
     (flagon:state "age:20 first name:borowski")
     :test #'equal)
 
+(is (flagon:update *state*
+                   (flagon:updater "age:$years")
+                   (flagon:state "years:20"))
+    (flagon:state "age:20 first name:borowski")
+    :test #'equal)
+
 (finalize)

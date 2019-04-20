@@ -193,7 +193,7 @@
   (@ (and sign
           identifier
           (or (and ws ":" ws
-                   (or variable identifier))
+                   (or variable identifier numeric-literal))
               (ret nil)))))
 
 (defrule pairs
